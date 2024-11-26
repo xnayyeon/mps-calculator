@@ -1,0 +1,102 @@
+/* Save this as styles.css and link it to your HTML file */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #555;
+}
+
+p#result {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #007BFF;
+}
+
+/* Gradient bar for MPS scale */
+#scaleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#scale {
+    width: 90%;
+    max-width: 400px;
+    height: 20px;
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00);
+    border-radius: 10px;
+    position: relative;
+    margin-top: 10px;
+}
+
+#marker {
+    width: 10px;
+    height: 30px;
+    background: #007BFF;
+    position: absolute;
+    top: -5px;
+    transform: translateX(-50%);
+}
+.description {
+    text-align: center;
+
+}
