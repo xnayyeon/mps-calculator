@@ -10,20 +10,20 @@
     <h1>Calculate your Motivation Potential Score (MPS)</h1>
     <p class="description">Please enter a value from 1 (low) to 7 (high) for each field.</p>
     <form id="mpsForm">
-        <label for="skillVariety">Anforderungsvielfalt ("Skill Variety"):</label>
-        <input type="number" id="skillVariety" name="skillVariety" min="0" max="7"  required><br>
+        <label for="skillVariety">Skill Variety:</label>
+        <input type="number" id="skillVariety" name="skillVariety" min="0" max="7" required><br>
 
-        <label for="taskIdentity">Ganzheitlichkeit der Aufgabe ("Task Identity"):</label>
-        <input type="number" id="taskIdentity" name="taskIdentity" min="0" max="7"  required><br>
+        <label for="taskIdentity">Task Identity (Is your task a big part of the entire product):</label>
+        <input type="number" id="taskIdentity" name="taskIdentity" min="0" max="7" required><br>
 
-        <label for="taskSignificance">Bedeutung der Aufgabe ("Task Significance"):</label>
-        <input type="number" id="taskSignificance" name="taskSignificance" min="0" max="7"  required><br>
+        <label for="taskSignificance">Task Significance:</label>
+        <input type="number" id="taskSignificance" name="taskSignificance" min="0" max="7" required><br>
 
-        <label for="autonomy">Autonomie ("Autonomy"):</label>
-        <input type="number" id="autonomy" name="autonomy" min="0" max="7"  required><br>
+        <label for="autonomy">AAutonomy:</label>
+        <input type="number" id="autonomy" name="autonomy" min="0" max="7" required><br>
 
-        <label for="feedback">Rückmeldung ("Feedback"):</label>
-        <input type="number" id="feedback" name="feedback" min="0" max="7"  required><br>
+        <label for="feedback">Feedback:</label>
+        <input type="number" id="feedback" name="feedback" min="0" max="7" required><br>
 
         <button type="button" onclick="calculateMPS()">Calculate MPS</button>
     </form>
@@ -35,45 +35,43 @@
             <div id="marker" style="left: 0;"></div>
         </div>
     </div>
-    
 
     <script>
    function calculateMPS() {
-    // Get input values
+ 
     const skillVariety = parseFloat(document.getElementById('skillVariety').value);
     const taskIdentity = parseFloat(document.getElementById('taskIdentity').value);
     const taskSignificance = parseFloat(document.getElementById('taskSignificance').value);
     const autonomy = parseFloat(document.getElementById('autonomy').value);
     const feedback = parseFloat(document.getElementById('feedback').value);
 
-    // Validate the inputs
+    // Input Validation
     if (!validateInput(skillVariety) || !validateInput(taskIdentity) || 
         !validateInput(taskSignificance) || !validateInput(autonomy) || 
         !validateInput(feedback)) {
         alert("All values must be between 1 and 7.");
-        return;
+       return;
     }
 
-    // Calculate MPS
+    // Calculations
     const average = (skillVariety + taskIdentity + taskSignificance) / 3;
     const mps = average * autonomy * feedback;
 
-    // Display the result
     document.getElementById('result').textContent = `MPS: ${mps.toFixed(2)}`;
 
-    // Update the marker position on the scale
+    // Marker
     const marker = document.getElementById('marker');
     const scaleWidth = document.getElementById('scale').offsetWidth;
 
-    // Assuming MPS ranges from 0 to 100 for scale mapping
-    const mpsPercentage = Math.min(Math.max(mps / 343, 0), 1); // Clamp between 0 and 1
+    // Scale Map 
+    const mpsPercentage = Math.min(Math.max(mps / 343, 0), 1);
     const markerPosition = mpsPercentage * scaleWidth;
     marker.style.left = `${markerPosition}px`;
 }
 
-// Validation function to ensure the value is between 1 and 7
+// Input Check
 function validateInput(value) {
-    return value >= 1 && value <= 7;
+   return value >= 1 && value <= 7;
 }
 
     </script>

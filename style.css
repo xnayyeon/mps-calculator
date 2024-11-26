@@ -1,5 +1,3 @@
-/* Save this as styles.css and link it to your HTML file */
-
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -70,7 +68,7 @@ p#result {
     color: #007BFF;
 }
 
-/* Gradient bar for MPS scale */
+/* Gradient bar for scale */
 #scaleContainer {
     display: flex;
     flex-direction: column;
@@ -82,7 +80,7 @@ p#result {
     width: 90%;
     max-width: 400px;
     height: 20px;
-    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00);
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffd000, #7fff00, #00c51a);
     border-radius: 10px;
     position: relative;
     margin-top: 10px;

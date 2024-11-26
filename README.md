@@ -1,6 +1,6 @@
 # MPS Calculator
 
-This project is a simple web application for calculating the **Motivation Potential Score (MPS)** based on the **Job Characteristics Theory** by Hackman and Oldham (1975, 1980). The calculator takes user inputs for five key job characteristics and computes the MPS using the provided formula. Additionally, it provides a graphical representation of the score on a gradient bar.
+This project is a simple option for calculating the **Motivation Potential Score (MPS)** based on the **Job Characteristics Theory** by Hackman and Oldham (1975, 1980). The calculator takes user inputs for five key job characteristics and computes the MPS using the provided formula. Additionally, it provides a graphical representation of the score on a gradient bar.
 
 ## Features
 
